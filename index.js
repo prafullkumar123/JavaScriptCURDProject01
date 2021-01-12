@@ -77,6 +77,26 @@ function display(superArray) {
     document.getElementById('tdata').innerHTML = tableData;
 }
 
+
+//bubbling :- Parent events applying child also
+
+//Event 
+function displayModal(event){
+    let modal = document.getElementsByClassName("modal")[0];
+    modal.style.display = "block";
+}
+
+function hideModal(event){
+    if (event.target.className != "data") {
+        let modal = document.getElementsByClassName("modal")[0];
+        modal.style.display = "none";
+        event.stopPropagation();
+    }
+}
+
+
+
+
 // First time calling Display function
 display(superHeros);
 let add = () => {
