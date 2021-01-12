@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project - 01 CURD Application</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <div class="modal" onclick="hideModal(event);">
+        <div class="modalChild">
+            <div class="form">
+                <input type="text" placeholder="name" name="name" id="upname">
+                <input type="number" placeholder="age" name="age" id="upage">
+                <input type="text" placeholder="plannet" name="plannet" id="upplannet">
+                <input type="number" placeholder="height" name="height" id="upheight">
+                <button onclick="updateSuperHero();">Update SuperHero</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="data">
+        <div class="form">
+            <input type="text" placeholder="name" name="name" id="name">
+            <input type="number" placeholder="age" name="age" id="age">
+            <input type="text" placeholder="plannet" name="plannet" id="plannet">
+            <input type="number" placeholder="height" name="height" id="height">
+            <button onclick="add();">Add SuperHero</button>
+        </div>
+        <br>
+        <div class="searchOutlet">
+            <input type="text" id="search" placeholder="Search..." name="search" onkeyup="search();">
+        </div>
+        <br>
+        <table border="1" align="center">
+            <thead>
+                <title>SuperHeros</title>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Plannet</th>
+                    <th>Height</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="tdata">
+            </tbody>
+        </table>
+    </div>
+
+    <button onclick="dogApi();">Movies</button>
+    <div id="dogs">
+
+    </div>
+    <script src="index.js" />
+    <script src="../Events/event.js" />
+</body>
+
+</html>
